@@ -1,0 +1,359 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.3">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Saiketan Gande | Data Engineer&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>:root {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--spidey-red: #E23636;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--spidey-blue: #013C86;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--dark-bg: #121212;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--web-color: rgba(255, 255, 255, 0.1);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--text-light: #f5f5f5;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>* {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-sizing: border-box;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Courier New', Courier, monospace; /* Tech/Terminal feel */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: var(--dark-bg);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: var(--text-light);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>overflow-x: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* Canvas Background for Web Effect */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>#web-canvas {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: fixed;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>top: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>left: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>z-index: -1;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>opacity: 0.4;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* Header / Hero Section */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>header {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 100vh;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>h1 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 4rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-transform: uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>letter-spacing: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: var(--text-light);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-shadow: 4px 4px 0px var(--spidey-red);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>animation: float 3s ease-in-out infinite;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.subtitle {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: var(--spidey-blue);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #fff;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 5px 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* Sections */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-width: 1000px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0 auto;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 4rem 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>h2 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 2.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-bottom: 3px solid var(--spidey-red);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: inline-block;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* Skills Grid */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.skills-grid {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.skill-card {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(255, 255, 255, 0.05);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid var(--spidey-blue);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: transform 0.3s, box-shadow 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.skill-card:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-10px);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 0 20px var(--spidey-red);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: var(--spidey-blue);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* Projects Section */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.project-card {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #1e1e1e;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-left: 5px solid var(--spidey-red);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.project-card::before {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>content: '';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>top: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>right: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 50px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 50px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(135deg, transparent 50%, var(--spidey-blue) 50%);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.btn {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: inline-block;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: var(--spidey-red);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-decoration: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: background 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.btn:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: var(--spidey-blue);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* Animations */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>@keyframes float {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>0% { transform: translateY(0px); }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>50% { transform: translateY(-15px); }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>100% { transform: translateY(0px); }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>footer {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #000;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #555;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;canvas id="web-canvas"&gt;&lt;/canvas&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;header&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1&gt;Saiketan Gande&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="subtitle"&gt;Your Friendly Neighborhood Data Engineer&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p style="margin-top: 20px; max-width: 600px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>Spinning robust data pipelines and architecting cloud solutions in AWS &amp; Snowflake.<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>"With great data comes great responsibility."</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Tech Stack (Web Shooters)&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="skills-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="skill-card"&gt;AWS&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="skill-card"&gt;Snowflake&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="skill-card"&gt;Python&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="skill-card"&gt;SQL&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="skill-card"&gt;ETL Pipelines&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="skill-card"&gt;Data Architecture&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Mission Logs&lt;/h2&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="project-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;The Daily Bugle Archive (ETL)&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Built a scalable pipeline to ingest millions of records. Utilized AWS Glue and S3 to process unstructured data into structured Snowflake tables.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="#" class="btn"&gt;View Code&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="project-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Spidey-Sense Stock Analytics&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Real-time data streaming architecture for stock market analysis. Ingests ticker data and predicts trends using Python.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="#" class="btn"&gt;View Demo&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;footer&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Built by Saiketan Gande | Located in Denton, TX&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Interactive Web Effect Script</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const canvas = document.getElementById('web-canvas');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const ctx = canvas.getContext('2d');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>canvas.width = window.innerWidth;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>canvas.height = window.innerHeight;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>let particlesArray;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Mouse position</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let mouse = {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>x: null,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>y: null,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>radius: (canvas.height/80) * (canvas.width/80)</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>window.addEventListener('mousemove',<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>function(event) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>mouse.x = event.x;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>mouse.y = event.y;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Create particle</p>
+<p class="p1"><span class="Apple-converted-space">        </span>class Particle {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>constructor(x, y, directionX, directionY, size, color) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.x = x;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.y = y;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.directionX = directionX;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.directionY = directionY;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.size = size;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.color = color;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Method to draw individual particle</p>
+<p class="p1"><span class="Apple-converted-space">            </span>draw() {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>ctx.beginPath();</p>
+<p class="p1"><span class="Apple-converted-space">                </span>ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>ctx.fillStyle = '#E23636'; // Spidey Red dots</p>
+<p class="p1"><span class="Apple-converted-space">                </span>ctx.fill();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Check particle position, check mouse position, move the particle, draw the particle</p>
+<p class="p1"><span class="Apple-converted-space">            </span>update() {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (this.x &gt; canvas.width || this.x &lt; 0) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.directionX = -this.directionX;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (this.y &gt; canvas.height || this.y &lt; 0) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.directionY = -this.directionY;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Check collision detection - mouse position / particle position</p>
+<p class="p1"><span class="Apple-converted-space">                </span>let dx = mouse.x - this.x;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>let dy = mouse.y - this.y;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>let distance = Math.sqrt(dx*dx + dy*dy);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (distance &lt; mouse.radius + this.size){</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>if (mouse.x &lt; this.x &amp;&amp; this.x &lt; canvas.width - this.size * 10) {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>this.x += 10;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>if (mouse.x &gt; this.x &amp;&amp; this.x &gt; this.size * 10) {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>this.x -= 10;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>if (mouse.y &lt; this.y &amp;&amp; this.y &lt; canvas.height - this.size * 10) {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>this.y += 10;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>if (mouse.y &gt; this.y &amp;&amp; this.y &gt; this.size * 10) {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>this.y -= 10;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Move particle</p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.x += this.directionX;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.y += this.directionY;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.draw();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Create particle array</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function init() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>particlesArray = [];</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let numberOfParticles = (canvas.height * canvas.width) / 9000;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>for (let i = 0; i &lt; numberOfParticles; i++) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>let size = (Math.random() * 2) + 1;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>let directionX = (Math.random() * 2) - 1;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>let directionY = (Math.random() * 2) - 1;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>let color = '#E23636';</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>particlesArray.push(new Particle(x, y, directionX, directionY, size, color));</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Animation loop</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function animate() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>requestAnimationFrame(animate);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>ctx.clearRect(0,0,innerWidth, innerHeight);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>for (let i = 0; i &lt; particlesArray.length; i++) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>particlesArray[i].update();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>connect();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Check if particles are close enough to draw line between them</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function connect(){</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let opacityValue = 1;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>for (let a = 0; a &lt; particlesArray.length; a++) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>for (let b = a; b &lt; particlesArray.length; b++) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>let distance = (( particlesArray[a].x - particlesArray[b].x) * (particlesArray[a].x - particlesArray[b].x))</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>+ ((particlesArray[a].y - particlesArray[b].y) * (particlesArray[a].y - particlesArray[b].y));</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>if (distance &lt; (canvas.width/7) * (canvas.height/7)) {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>opacityValue = 1 - (distance/20000);</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>ctx.strokeStyle = 'rgba(255, 255, 255,' + opacityValue + ')'; // White webbing</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>ctx.lineWidth = 1;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>ctx.beginPath();</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>ctx.moveTo(particlesArray[a].x, particlesArray[a].y);</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>ctx.lineTo(particlesArray[b].x, particlesArray[b].y);</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>ctx.stroke();</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>window.addEventListener('resize',<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>function(){</p>
+<p class="p1"><span class="Apple-converted-space">                </span>canvas.width = innerWidth;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>canvas.height = innerHeight;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>mouse.radius = ((canvas.height/80) * (canvas.height/80));</p>
+<p class="p1"><span class="Apple-converted-space">                </span>init();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>window.addEventListener('mouseout',</p>
+<p class="p1"><span class="Apple-converted-space">            </span>function(){</p>
+<p class="p1"><span class="Apple-converted-space">                </span>mouse.x = undefined;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>mouse.x = undefined;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>init();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>animate();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
